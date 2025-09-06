@@ -6,7 +6,6 @@ export default async function Page() {
   
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      {/* Header Section */}
       <div className="border-b bg-white/95 dark:bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
@@ -20,7 +19,6 @@ export default async function Page() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {users.length > 0 ? (
@@ -41,7 +39,6 @@ export default async function Page() {
                     className="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm transition-all duration-200 hover:shadow-md hover:shadow-slate-200/50 dark:hover:shadow-slate-800/50"
                   >
                     <div className="flex items-center space-x-4">
-                      {/* Avatar */}
                       <div className="relative">
                         <div className="h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold text-lg shadow-sm">
                           {user.username.charAt(0).toUpperCase()}
@@ -49,7 +46,6 @@ export default async function Page() {
                         <div className="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full bg-green-500 border-2 border-white dark:border-slate-900"></div>
                       </div>
                       
-                      {/* User Info */}
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center space-x-2">
                           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50 truncate">
@@ -67,7 +63,6 @@ export default async function Page() {
                         </div>
                       </div>
                       
-                      {/* Action Button */}
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3">
                           View Profile
@@ -79,7 +74,6 @@ export default async function Page() {
               </div>
             </div>
           ) : (
-            /* Empty State */
             <div className="text-center py-12">
               <div className="mx-auto w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6">
                 <svg
