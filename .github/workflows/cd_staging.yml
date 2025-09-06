@@ -1,0 +1,26 @@
+name: Deploy to Staging
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploying everything to the staging Cluster
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 54.226.3.42
+          username: ubuntu
+          key: ${{ secrets.PRIVATE_SSH_KEY }}
+          port: 22
+          script: |
+            cd 100x-CI-CD/
+            echo "Pulling the latest changes from the main branch"
+            git pull origin main
+            pnpm run build
+            pm2 restart all
+            echo "Deployed successfully to the staging server"
