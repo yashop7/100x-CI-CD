@@ -5,7 +5,7 @@ import { client } from '@repo/db/client';
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 app.get('/', (req, res) => {
   res.send('Hello from the HTTP server!');
