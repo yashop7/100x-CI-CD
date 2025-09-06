@@ -21,6 +21,7 @@ jobs:
             cd 100x-CI-CD/
             echo "Pulling the latest changes from the main branch"
             git pull origin main
+            pnpm install
             pnpm run build
             pm2 restart all
             echo "Deployed successfully to the staging server"
